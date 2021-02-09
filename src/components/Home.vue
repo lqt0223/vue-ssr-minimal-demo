@@ -28,3 +28,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+p {
+  color: coral;
+}
+</style>

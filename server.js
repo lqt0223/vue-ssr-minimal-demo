@@ -12,7 +12,6 @@ const renderer = createBundleRenderer(serverBundle, {
   clientManifest
 });
 
-
 server.use(express.static('dist'))
 
 server.get('*', (req, res) => {
@@ -23,6 +22,7 @@ server.get('*', (req, res) => {
     url: req.url
   };
   renderer.renderToString(context, (err, html) => {
+    if (err) console.log(err);
     res.end(html);
   });
 });

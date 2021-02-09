@@ -29,3 +29,8 @@ export default {
 }
 </script>
 
+<style scoped>
+p {
+  color: tan;
+}
+</style>
