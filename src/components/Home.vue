@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="counter !== null">
     <p>home</p>
     <h1>{{ counter }}</h1>
     <h1 @click="handleIncrement">{{ counter2 }}</h1>
@@ -11,6 +11,7 @@
       </swiper>
     </div>
   </div>
+  <div v-else>loading...</div>
 </template>
 
 <script>
@@ -31,6 +32,9 @@ export default {
   },
   asyncData({ store }) {
     return store.dispatch('change')
+  },
+  mounted() {
+    this.$store.dispatch('change')
   },
   methods: {
     handleIncrement() {

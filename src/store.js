@@ -23,8 +23,8 @@ export default function createStore() {
   return new Vuex.Store({
     state: () => {
       return {
-        counter: 0,
-        counter10x: 0
+        counter: null,
+        counter10x: null
       }
     },
     actions: {
