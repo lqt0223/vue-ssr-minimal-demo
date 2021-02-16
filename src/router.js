@@ -9,6 +9,7 @@ export default function createRouter() {
     routes: [
       { path: '/home', component: () => import('./components/Home.vue') },
       { path: '/profile', component: () => import('./components/Profile.vue') },
+      { path: '*', component: () => import('./components/404.vue') },
     ]
   })
 }
