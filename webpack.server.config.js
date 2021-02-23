@@ -9,6 +9,14 @@ module.exports = merge(baseConfig, {
   output: {
     libraryTarget: 'commonjs2'
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['css-loader']
+      }
+    ]
+  },
   plugins: [
     new VueSSRServerPlugin(),
   ]

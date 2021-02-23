@@ -12,18 +12,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              esModule: false
-            }
-          }
-        ]
-      }
     ]
   },
   plugins: [
