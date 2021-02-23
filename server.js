@@ -9,7 +9,9 @@ const clientManifest = require('./dist/vue-ssr-client-manifest.json');
 const renderer = createBundleRenderer(serverBundle, {
   runInNewContext: false,
   template,
-  clientManifest
+  clientManifest,
+  shouldPreload: () => false,
+  shouldPrefetch: () => false
 });
 
 server.use(express.static('dist'))
